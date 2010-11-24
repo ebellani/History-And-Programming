@@ -1,0 +1,43 @@
+\documentclass[a4paper, 12pt]{article}
+
+%better bibliography style control
+\usepackage{natbib}
+
+%utf-8, because it is the default in linux these days
+\usepackage[utf8]{inputenc}
+
+%\usepackage{graphicx}
+\usepackage[pdftex]{color,graphicx}
+\usepackage{html}
+
+%make the url links blue
+\hypersetup{
+    pdfauthor={Eduardo Bellani},
+    pdftitle={History and Programming},
+    pdfkeywords={Programming, History, Learning},
+    colorlinks,
+    urlcolor= blue
+}
+
+
+\title{History and Programming}
+
+\author{Eduardo Bellani \thanks{\htmladdnormallink{blog}{http://contemplative-bonobo.blogspot.com/} --
+                                \htmladdnormallink{contact}
+                                                  {mailto:ebellani@gmail.com}} } 
+
+\begin{document} 
+    \maketitle
+
+    \input{abstract}
+    \input{introduction} %1 page
+        
+    % There should be nothing before the main result that a reader does not
+    % need to know in order to understand the main result.
+    \input{ideas}
+%        
+%    \input{conclusion}
+
+    \bibliographystyle{plainnat}
+    \bibliography{../references/references}
+\end{document}
